@@ -1,0 +1,17 @@
+<resources>
+    <!-- aqui agrego_todo lo que voy a usar es decir los nombres de todos lo botones e campos -->
+    <string name="app_name">TipCalc</string>
+    <string name="main.btn.submit">Calcular</string>
+    <string name="main.totalCalc">Total</string>
+    <string name="main.percentage">% de propina</string>
+    <string name="main.button.increase">+</string>
+    <string name="main.button.decrease">-</string>
+    <string name="main.button.clear">Borrar Recientes</string>
+    <string name="main.notice.clear">Elementos recientes ha quedado vacio</string>
+    <string name="main.menu.action.about">Acerca de</string>
+
+    <string name="global.message.tip">Propina %,.1f </string> <!-- obligatorio ponerle el $one word sino da error con el string.format-->
+    <string name="tipdetail.message.tip">Total %,.1f </string>
+
+
+</resources>

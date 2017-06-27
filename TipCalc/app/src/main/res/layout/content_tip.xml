@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--diferencia entre un Linearlayout es que me
+    coloca_todo los elementos uno de
+    debajo del otro y el Relativelayout uno respecto al otro
+    esto es para todo el contenido de la vista de mi app -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/main.totalCalc"
+        android:ems="10"
+        android:id="@+id/inputBill"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main.btn.submit"
+        android:id="@+id/btnSubmit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/inputBill"
+        android:layout_toEndOf="@+id/inputBill"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:hint="@string/main.percentage"
+        android:ems="10"
+        android:id="@+id/inputPropina"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main.button.increase"
+        android:id="@+id/btnIncrement"
+        android:layout_below="@+id/inputBill"
+        android:layout_alignTop="@+id/inputPropina"
+        android:layout_toRightOf="@+id/inputPropina"
+        android:layout_toEndOf="@+id/inputPropina" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main.button.decrease"
+        android:id="@+id/btnDecrease"
+        android:layout_alignTop="@+id/btnIncrement"
+        android:layout_toRightOf="@+id/btnIncrement"
+        android:layout_toEndOf="@+id/btnIncrement" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main.button.clear"
+        android:id="@+id/btnClear"
+        android:ems="10"
+        android:layout_below="@+id/inputPropina"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/separator"
+        android:layout_below="@+id/btnClear"
+        android:layout_alignStart="@+id/btnClear"
+        android:layout_alignEnd="@+id/btnSubmit"
+        android:layout_alignLeft="@+id/btnClear"
+        android:layout_alignRight="@+id/btnSubmit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tctTip"
+        android:layout_below="@+id/separator"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <!--below coloco por debajo del que ya tengo-->
+</RelativeLayout>
